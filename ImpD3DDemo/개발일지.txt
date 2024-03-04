@@ -1,0 +1,134 @@
+# 23.12.11
+프로젝트 생성. 일단 13일 까지 초기화가 목표.
+
+- 미리 컴파일 된 헤더를 사용하기로 결정했다. pch.h 추가
+- BaseWindow.h 를 가져왔다. 42번 줄은 정확히 이해를 못하고 있으므로 나중에 다시 한 번 볼 것.
+- 일단 Process 까지도 Demo 이므로 중요하지 않아 보인다. 이전에 쓰던 것을 그대로 가져온다.
+- BaseWindow.h의 103번 줄에서 PCWSTR m_className; 가 포인터라면 delete 해야되는 거 아닌가?
+
+# 23.12.12, 23.12.13
+- D3D용 렌더러 분리
+- 일단 그래픽스 엔진이 게임엔진을 모른다면... InputManager를 공유할 수 없다!
+	그럼 따로 만들어야 하나? InputManager는 싱글톤을 써도 되지 않을까??
+	생각해보니 Engine 자체에 InputManager가 필요한가? 음...
+- 파생 클래스의 헤더를 include 안 하고 인터페이스만 가지고 조작하려면...
+	팩토리를 만들어야 되는데 팩토리를 클래스로 따로 분리하면 또 팩토리 
+	헤더를 인클루드 해야하는데... ? 어떻게 만들어야 하지!
+
+	enum을 안쓰고 템플릿으로 해보고 싶었는데
+
+	~
+	// 	template <typename makeType>
+	// 	class Factory
+	// 	{
+	// 	protected:
+	// 		virtual makeType* Create() const abstract;
+	// 	};
+	// 
+	// 	class RendererFactory : public Factory<IImp3DRenderer>
+	// 	{
+	// 		virtual IImp3DRenderer* Create() const override
+	// 		{
+	// 
+	// 		}
+	// 	};
+	virtual에는 템플릿 인자를 못 넣음. 당연함.
+
+	~
+	class RendererFactory
+	{
+	public:
+		template <typename makeType>
+		IImp3DRenderer* Create() const
+		{
+			return new makeType;
+		}
+	};
+
+	// 	RendererFactory renderFactory;
+	// 	renderFactory.Create<ImpD3D11Renderer>();
+
+	템플릿에 인자로 넣을 때 클래스 선언만 하면 될 줄 알았는데... 아니었다!
+
+	팩토리를 만드려면... 구현 클래스의 헤더를 include 해야하는데...
+	템플릿은 보통 헤더에다 정의하니까...
+	팩토리의 헤더를 include 하면... 결국엔 다 include 하는 거랑 다를 게 없다!
+
+# 23.12.14
+- 렌더러를 만드려고 했는데 이제는 그려야 될 게임오브젝트의 정보, 라이트, 카메라를 외부에서 넣어줘야 한다.
+	1. 매 프레임마다 값 넘겨주기
+	2. Add로 렌더러 내부에 저장하기
+	에서 1.로 정하려 했는데 생각해보니 포인터 또는 참조의 형태로 가지고 있으면 
+	렌더러 내부에 저장해도 매 프레임마다 추가 삭제를 안해도 되어서 충분히 괜찮을 거 같다.
+- DirectXMatrh 없이 게임 엔진에서 데이터 받아오려니까 DirectXMath를 랩핑한
+	Vector 클래스를 만들어야 하는데 너무 귀찮다. 다 만들었다.
+
+	렌더러에서 사용할 Light, Camera를 외부에서 받아오기 위해 
+	LightInfo, CameraInfo, MeshObjectInfo 클래스를 만들었다.
+
+	//Mesh 구조체가 필요하다. FBX Loader에서 어떻게 가져올지 생각해보자.
+	// 근데 skinning이 적용되는 Mesh랑 
+	// animaition 정보가 있는 Mesh랑 
+	// 정적인 Mesh가 같을까?
+	// 아닌 거 같다.
+	// 상속 구조로 만들어볼까?
+
+	카메라의 이동이나 회전이 그래픽스 엔진 안의 카메라에 구현이 되어 있어야 할까?
+	아닌 거 같은데
+	그리고 Renderer를 게임 엔진에 넘겨 주는 게 맞을까
+	한 번더 GraphicsEngine으로 감싸서 넘겨주는 게 맞을까
+	후자가 맞는 거 같긴 한데 흠...
+
+# 23.12.15
+- 역시 렌더러를 게임 엔진에서 컨트롤 할 수 있게 하는 게 아니라
+	그래픽스 엔진이란 클래스를 따로 만드는 게 맞다.
+
+- 예쁘게 게임엔진을 위한 인터페이스를 만들고 있었는데! IMGUI가 D3D가 필요하다는 문제에 마주치고 말았다.
+	void* 밖에 답이 없나? 기태 오빠랑 얘기해도 비슷한 것 같다...
+
+	교수님께서 일단 IMGUI를 쓸려면 D3D가 필요하다고 하셨다. 맞다...
+	한 번더 랩핑을 할 클래스를 만들면 된다고 하셨다. 초기화만 하면 되니까...
+	근데 근데... 일단 다른 것들도 만들어야 되니까 일단은! void 포인터를 쓰고
+	나중에 기능 구현이 어느정도 이루어졌을 때 다시 다듬어 보는 걸로 하자!
+
+	// 커밋
+refactor: Device클래스를 만들고 Renderer에서 가지고 있던 Device, deviceContext, swapchain 등을 분리
+
+- 캡슐화를 생각하면 Device를 분리하는 게 맞다.
+- 수업, 교수님 코드를 참고했다.
+- 아직 FeatureLevel, MultiSampling, Driver 등 익숙하지 않은 것들이 많다. 몰라서 애초에 적용안하고 기본 값을 줬다.
+- 나중에 옵션으로 선택할 일이 있으면 필수적으로 수정할 것
+
+# 23.12.18
+- 일단 리소스 매니저를 만들었다.
+	지금 문제가 되는 점은 각 리소스마다 로드할 때 필요한 정보가 다르다는것.
+	예를 들어, Vertex Buffer는 FBX Loader가 필요하다.
+	하지만 Texture에는 FBX Loader가 필요없다. 
+	이건 어떻게 처리해야 할까
+
+- IMGUI Docking Ver. 에서 IMGUI 창을 밖으로 빼면 렌더가 안되는 현상 발생.
+	IMGUI 창을 밖으로 빼면 RenderTarget이 여러 개가 되어서 RenderTarget을 
+	매 프레임마다 바인딩 해줘야 하는 것 같다.
+	이거 안해서 2~3시간 Debuging 한 거 같다.
+
+- 임시로 Test를 위해서 Effect Framework를 추가했는데 안 쓰고 하는 방법을
+	공부해야한다.
+
+- 일단 기태 오빠가 Camera, Light, Mesh 를 포인터 말고 매번 값 복사 하자고 해서
+	일단은... 그렇게 해보기로 했다. 만약 느려진다면 바꿀 예정
+
+# 23.12.19
+- 일단 IMGUI 모든 창이 docking가능 하게 변경해주는 걸 도와줬다.
+ImGui::DockSpaceOverViewport(ImGui::GetMainViewport(), ImGuiDockNodeFlags_PassthruCentralNode);
+
+- 카메라 이동, 회전을 만들었다.
+	이동은 쉬웠는데... 회전은 기존의 카메라 클래스를 참고하다가 쉬운 건데도 헤멨다.
+	다음부터는 깊게 생각을 좀 해보자.
+
+# 23.12.22
+- 그래픽스엔진에서도 MeshObject를 관리할 거라면 Mesh의 Transform 정보를 포인터로 가지고있는게
+낫지 않을까
+- 아니라면...
+1. MeshInfo에 ObjectID(식별 가능한 값)을 넣어서 보낸다. 
+2-1. 특정 ObjectID로 삭제 요청이 오면 삭제한다.
+2-2. 이번 프레임에 그릴 오브젝트 ID를 받고 위치 값을 갱신한다. ???

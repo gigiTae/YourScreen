@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="header">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="header\00.Define">
+      <UniqueIdentifier>{6b919da5-86c5-4606-b303-5346ec54e534}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="source\00.Define">
+      <UniqueIdentifier>{d2bde23b-4fbe-44c3-b1df-495bce68470d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="header\01.EngineModule">
+      <UniqueIdentifier>{e6c44b1e-3b0b-4030-b8be-4c498614d9e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\01.EngineModule">
+      <UniqueIdentifier>{ac410a3d-93f7-4cae-80e9-a9841dc3308f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="header\02.World">
+      <UniqueIdentifier>{eb1b93dd-aeec-4ecc-a9d4-f569df228f90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="header\05.Manager">
+      <UniqueIdentifier>{2341bb05-8c97-4a83-80e0-d07e0d324bce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="header\06.Resource">
+      <UniqueIdentifier>{e5832545-5b32-42d1-bfde-d4e30d0ecc90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\02.World">
+      <UniqueIdentifier>{8fd843ad-d5c4-45bd-a437-0de69e36f389}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\05.Manager">
+      <UniqueIdentifier>{349f35f4-5980-44e4-964c-c6ed1c4348cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\06.Resource">
+      <UniqueIdentifier>{c688c431-9de8-4f43-8858-5b7541225201}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\04.Component">
+      <UniqueIdentifier>{af2f5712-0a77-483a-8794-94f08607099b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\03.Entity">
+      <UniqueIdentifier>{f19acf87-062b-474e-b791-3a802643af30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="header\07.Event">
+      <UniqueIdentifier>{4d6a5a10-24a3-4d5f-8bed-61ebbe1c85ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\07.Event">
+      <UniqueIdentifier>{9ad0e560-8a09-4cb1-8e0a-33ecaff3e191}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="header\09.Reflection">
+      <UniqueIdentifier>{bcbbc019-f610-4de3-9323-97dcad27c0b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\09.Reflection">
+      <UniqueIdentifier>{aa55df63-94c0-45be-82ad-4444527775ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\04.Component\Physics">
+      <UniqueIdentifier>{e2861a2c-7ae1-4c67-888b-31586e66d6cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="header\08.Physics">
+      <UniqueIdentifier>{de85d033-8966-4251-9ffd-ec6d5e6846be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\08.Physics">
+      <UniqueIdentifier>{ffd93103-e113-4c78-aaed-1b74ab9af0f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="header\03.Entity">
+      <UniqueIdentifier>{5e42c333-03f2-4360-a35d-c134f46206f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="header\04.Component">
+      <UniqueIdentifier>{217877ec-b2e3-4c04-8579-ee18518fd666}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="header\04.Component\Physics">
+      <UniqueIdentifier>{21c464e1-d9d0-4c3c-8074-20e8bb67445c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="EngineModulePCH.h" />
+    <ClInclude Include="TypeIndex.h">
+      <Filter>header\00.Define</Filter>
+    </ClInclude>
+    <ClInclude Include="InputEnum.h">
+      <Filter>header\00.Define</Filter>
+    </ClInclude>
+    <ClInclude Include="InputManager.h">
+      <Filter>header\05.Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeManager.h">
+      <Filter>header\05.Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager.h">
+      <Filter>header\05.Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>header\06.Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceEnum.h">
+      <Filter>header\00.Define</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityResource.h">
+      <Filter>header\06.Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="PathManager.h">
+      <Filter>header\05.Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Transform.h">
+      <Filter>header\04.Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>header\04.Component</Filter>
+    </ClInclude>
+    <ClInclude Include="EventManager.h">
+      <Filter>header\05.Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineModule.h">
+      <Filter>header\01.EngineModule</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraManager.h">
+      <Filter>header\05.Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>header\04.Component</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentHandle.h">
+      <Filter>header\04.Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>header\03.Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="IEntity.h">
+      <Filter>header\03.Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="IWorld.h">
+      <Filter>header\02.World</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityComponentIterator.h">
+      <Filter>header\03.Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityComponentView.h">
+      <Filter>header\03.Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityIterator.h">
+      <Filter>header\03.Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityView.h">
+      <Filter>header\03.Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>header\04.Component</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineModuleHeader.h" />
+    <ClInclude Include="Light.h">
+      <Filter>header\04.Component</Filter>
+    </ClInclude>
+    <ClInclude Include="ISubscriber.h">
+      <Filter>header\07.Event</Filter>
+    </ClInclude>
+    <ClInclude Include="EventSubscriber.h">
+      <Filter>header\07.Event</Filter>
+    </ClInclude>
+    <ClInclude Include="CallBackEvent.h">
+      <Filter>header\07.Event</Filter>
+    </ClInclude>
+    <ClInclude Include="World.h">
+      <Filter>header\02.World</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionManager.h">
+      <Filter>header\05.Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="QuaternionType.h">
+      <Filter>header\09.Reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="Broadphase.h">
+      <Filter>header\08.Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="CubeMap.h">
+      <Filter>header\06.Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="Collision.h">
+      <Filter>header\08.Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Rigidbody.h">
+      <Filter>header\04.Component\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Collider.h">
+      <Filter>header\04.Component\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="AABB.h">
+      <Filter>header\08.Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="AABBTree.h">
+      <Filter>header\08.Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Node.h">
+      <Filter>header\08.Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="SphereCollider.h">
+      <Filter>header\04.Component\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="BoxCollider.h">
+      <Filter>header\04.Component\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="ColliderTypeEnum.h">
+      <Filter>header\00.Define</Filter>
+    </ClInclude>
+    <ClInclude Include="Collide.h">
+      <Filter>header\08.Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Solver.h">
+      <Filter>header\08.Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionInfomation.h">
+      <Filter>header\08.Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Tag.h">
+      <Filter>header\00.Define</Filter>
+    </ClInclude>
+    <ClInclude Include="TagMapResource.h">
+      <Filter>header\06.Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="TagMap.h">
+      <Filter>header\08.Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="ImpColorType.h">
+      <Filter>header\09.Reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="NameCheck.h">
+      <Filter>header\00.Define</Filter>
+    </ClInclude>
+    <ClInclude Include="CapsuleCollider.h">
+      <Filter>header\04.Component\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldManager.h">
+      <Filter>header\05.Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="UI.h">
+      <Filter>header\04.Component</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundManager.h">
+      <Filter>header\05.Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound.h">
+      <Filter>header\06.Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="SkeletalMesh.h">
+      <Filter>header\04.Component</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationClip.h">
+      <Filter>header\04.Component</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioClip.h">
+      <Filter>header\04.Component</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="TypeIndex.cpp">
+      <Filter>source\00.Define</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>source\00.Define</Filter>
+    </ClCompile>
+    <ClCompile Include="InputManager.cpp">
+      <Filter>source\05.Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldManager.cpp">
+      <Filter>source\05.Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceManager.cpp">
+      <Filter>source\05.Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource.cpp">
+      <Filter>source\06.Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityResource.cpp">
+      <Filter>source\06.Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeManager.cpp">
+      <Filter>source\05.Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="PathManager.cpp">
+      <Filter>source\05.Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Transform.cpp">
+      <Filter>source\04.Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>source\04.Component</Filter>
+    </ClCompile>
+    <ClCompile Include="EventManager.cpp">
+      <Filter>source\05.Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="EngineModule.cpp">
+      <Filter>source\01.EngineModule</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraManager.cpp">
+      <Filter>source\05.Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="IWorld.cpp">
+      <Filter>source\02.World</Filter>
+    </ClCompile>
+    <ClCompile Include="World.cpp">
+      <Filter>source\02.World</Filter>
+    </ClCompile>
+    <ClCompile Include="IEntity.cpp">
+      <Filter>source\03.Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>source\03.Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Component.cpp">
+      <Filter>source\04.Component</Filter>
+    </ClCompile>
+    <ClCompile Include="ComponentHandle.cpp">
+      <Filter>source\04.Component</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityComponentIterator.cpp">
+      <Filter>source\03.Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityComponentView.cpp">
+      <Filter>source\03.Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityIterator.cpp">
+      <Filter>source\03.Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityView.cpp">
+      <Filter>source\03.Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh.cpp">
+      <Filter>source\04.Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Light.cpp">
+      <Filter>source\04.Component</Filter>
+    </ClCompile>
+    <ClCompile Include="ISubscriber.cpp">
+      <Filter>source\07.Event</Filter>
+    </ClCompile>
+    <ClCompile Include="EventSubscriber.cpp">
+      <Filter>source\07.Event</Filter>
+    </ClCompile>
+    <ClCompile Include="CallBackEvent.cpp">
+      <Filter>source\07.Event</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionManager.cpp">
+      <Filter>source\05.Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="QuaternionType.cpp">
+      <Filter>source\09.Reflection</Filter>
+    </ClCompile>
+    <ClCompile Include="BroadPhasecpp.cpp">
+      <Filter>source\08.Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="CubeMap.cpp">
+      <Filter>source\06.Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="Collision.cpp">
+      <Filter>source\08.Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Rigidbody.cpp">
+      <Filter>source\04.Component\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Collider.cpp">
+      <Filter>source\04.Component\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="AABB.cpp">
+      <Filter>source\08.Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="AABBTree.cpp">
+      <Filter>source\08.Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Node.cpp">
+      <Filter>source\08.Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="BoxCollider.cpp">
+      <Filter>source\04.Component\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="SphereCollider.cpp">
+      <Filter>source\04.Component\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Collide.cpp">
+      <Filter>source\08.Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Solver.cpp">
+      <Filter>source\08.Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionInfomation.cpp">
+      <Filter>source\08.Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Tag.cpp">
+      <Filter>source\00.Define</Filter>
+    </ClCompile>
+    <ClCompile Include="TagMapResource.cpp">
+      <Filter>source\06.Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="TagMap.cpp">
+      <Filter>source\08.Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="ImpColorType.cpp">
+      <Filter>source\09.Reflection</Filter>
+    </ClCompile>
+    <ClCompile Include="NameCheck.cpp">
+      <Filter>source\00.Define</Filter>
+    </ClCompile>
+    <ClCompile Include="CapsuleCollider.cpp">
+      <Filter>source\04.Component\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="UI.cpp">
+      <Filter>source\04.Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound.cpp">
+      <Filter>source\06.Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundManager.cpp">
+      <Filter>source\05.Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="SkeletalMesh.cpp">
+      <Filter>source\04.Component\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimationClip.cpp">
+      <Filter>source\04.Component</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioClip.cpp">
+      <Filter>source\04.Component</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

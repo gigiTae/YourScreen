@@ -1,0 +1,357 @@
+#include "ImpGameEnginePCH.h"
+
+/// 리플렉션한 정보를 선언하는 cpp이다. 음 구조가 이상하다고 느끼지만 어쩔수없다....
+
+/// ========================= enum class ================================
+
+/// VibrationMode
+REFLECTION_ENUM_BEGIN(VibrationMode)
+REFLECTION_ENUM_MEMBER(Left)
+REFLECTION_ENUM_MEMBER(Right)
+REFLECTION_ENUM_MEMBER(Both)
+REFLECTION_ENUM_END()
+
+/// LightType
+REFLECTION_ENUM_BEGIN(ImpEngineModule::Light::LightType)
+REFLECTION_ENUM_MEMBER(Point)
+REFLECTION_ENUM_MEMBER(Spot)
+REFLECTION_ENUM_MEMBER(Directional)
+REFLECTION_ENUM_END()
+
+/// PhysicsTag
+REFLECTION_ENUM_BEGIN(ImpEngineModule::Physics::Tag)
+REFLECTION_ENUM_MEMBER(Untagged)
+REFLECTION_ENUM_MEMBER(Obstacle)
+REFLECTION_ENUM_MEMBER(Background)
+REFLECTION_ENUM_MEMBER(Hacking)
+REFLECTION_ENUM_MEMBER(Player)
+REFLECTION_ENUM_MEMBER(Attack)
+REFLECTION_ENUM_MEMBER(Camera)
+REFLECTION_ENUM_MEMBER(Detection)
+REFLECTION_ENUM_END()
+
+// RenderType
+REFLECTION_ENUM_BEGIN(ImpEngineModule::Mesh::RenderType)
+REFLECTION_ENUM_MEMBER(Default)
+REFLECTION_ENUM_MEMBER(Left)
+REFLECTION_ENUM_MEMBER(Right)
+REFLECTION_ENUM_MEMBER(Clear)
+REFLECTION_ENUM_END()
+
+REFLECTION_ENUM_BEGIN(ImpEngineModule::SkeletalMesh::RenderType)
+REFLECTION_ENUM_MEMBER(Default)
+REFLECTION_ENUM_MEMBER(Left)
+REFLECTION_ENUM_MEMBER(Right)
+REFLECTION_ENUM_MEMBER(Clear)
+REFLECTION_ENUM_END()
+
+REFLECTION_ENUM_BEGIN(ImpClient::HackableObject::SkillAbility)
+REFLECTION_ENUM_MEMBER(Qucik)
+REFLECTION_ENUM_MEMBER(Scale)
+REFLECTION_ENUM_MEMBER(Victory)
+REFLECTION_ENUM_END()
+
+
+/// ========================== struct ====================================
+
+/// Vector3
+REFLECTION_DATA_BEGIN(ImpMath::Vector3)
+REFLECTION_MEMBER(x)
+REFLECTION_MEMBER(y)
+REFLECTION_MEMBER(z)
+REFLECTION_END()
+
+/// Vector4
+REFLECTION_DATA_BEGIN(ImpMath::Vector4)
+REFLECTION_MEMBER(x)
+REFLECTION_MEMBER(y)
+REFLECTION_MEMBER(z)
+REFLECTION_MEMBER(w)
+REFLECTION_END()
+
+REFLECTION_DATA_BEGIN(ImpEngineModule::InputManager::Vibration)
+REFLECTION_MEMBER(_mode)
+REFLECTION_MEMBER(_intensity)
+REFLECTION_END()
+
+/// ========================== component ==================================
+
+/// Transform
+REFLECTION_BEGIN(ImpEngineModule::Transform)
+REFLECTION_MEMBER(_position)
+REFLECTION_MEMBER(_rotation)
+REFLECTION_MEMBER(_scale)
+REFLECTION_END()
+
+/// Camera
+REFLECTION_BEGIN(ImpEngineModule::Camera)
+REFLECTION_MEMBER(_isMain)
+REFLECTION_MEMBER(_isSecond)
+REFLECTION_MEMBER(_fieldOfView)
+REFLECTION_MEMBER(_nearPlain)
+REFLECTION_MEMBER(_farPlain)
+REFLECTION_MEMBER(_isPerspective)
+REFLECTION_END()
+
+/// Mesh
+REFLECTION_BEGIN(ImpEngineModule::Mesh)
+REFLECTION_MEMBER(_renderType)
+REFLECTION_MEMBER(_isOpaque)
+REFLECTION_MEMBER(_isCullNone)
+REFLECTION_MEMBER(_pixelShader)
+REFLECTION_MEMBER(_vertexShader)
+REFLECTION_MEMBER(_fbx)
+REFLECTION_MEMBER(_baseColor)
+REFLECTION_MEMBER(_normal)
+REFLECTION_MEMBER(_metalic)
+REFLECTION_MEMBER(_emission)
+REFLECTION_END()
+
+/// SkelatalMesh
+REFLECTION_BEGIN(ImpEngineModule::SkeletalMesh)
+REFLECTION_MEMBER(_renderType)
+REFLECTION_MEMBER(_isOpaque)
+REFLECTION_MEMBER(_isCullNone)
+REFLECTION_MEMBER(_pixelShader)
+REFLECTION_MEMBER(_vertexShader)
+REFLECTION_MEMBER(_fbx)
+REFLECTION_MEMBER(_baseColor)
+REFLECTION_MEMBER(_normal)
+REFLECTION_MEMBER(_metalic)
+REFLECTION_MEMBER(_emission)
+REFLECTION_END()
+
+
+/// Light
+REFLECTION_BEGIN(ImpEngineModule::Light)
+REFLECTION_MEMBER(_type)
+REFLECTION_MEMBER(_intensity)
+REFLECTION_MEMBER(_range)
+REFLECTION_MEMBER(_spotRadius)
+REFLECTION_MEMBER(_color)
+REFLECTION_END()
+
+/// BoxCollider
+REFLECTION_BEGIN(ImpEngineModule::BoxCollider)
+REFLECTION_MEMBER(_tag)
+REFLECTION_MEMBER(_isTrigger)
+REFLECTION_MEMBER(_isRotatable)
+REFLECTION_MEMBER(_size)
+REFLECTION_MEMBER(_offset)
+REFLECTION_END()
+
+/// SphereCollider
+REFLECTION_BEGIN(ImpEngineModule::SphereCollider)
+REFLECTION_MEMBER(_tag)
+REFLECTION_MEMBER(_isTrigger)
+REFLECTION_MEMBER(_radius)
+REFLECTION_MEMBER(_offset)
+REFLECTION_END()
+
+/// CapsuleCollider
+REFLECTION_BEGIN(ImpEngineModule::CapsuleCollider)
+REFLECTION_MEMBER(_tag)
+REFLECTION_MEMBER(_isTrigger)
+REFLECTION_MEMBER(_isRotatable)
+REFLECTION_MEMBER(_radius)
+REFLECTION_MEMBER(_height)
+REFLECTION_MEMBER(_offset)
+REFLECTION_END()
+
+/// Rigidbody
+REFLECTION_BEGIN(ImpEngineModule::Rigidbody)
+REFLECTION_MEMBER(_isKinematic)
+REFLECTION_MEMBER(_hasGravity)
+REFLECTION_MEMBER(_mass)
+REFLECTION_MEMBER(_linearDamping)
+REFLECTION_MEMBER(_velocity)
+REFLECTION_END()
+
+/// UI
+REFLECTION_BEGIN(ImpEngineModule::UI)
+REFLECTION_MEMBER(_texturePath)
+REFLECTION_MEMBER(_UIPosition)
+REFLECTION_MEMBER(_layer)
+REFLECTION_END()
+
+/// AnimationClip
+REFLECTION_BEGIN(ImpEngineModule::AnimationClip)
+REFLECTION_MEMBER(_animations)
+REFLECTION_MEMBER(_currentAnimation)
+REFLECTION_END()
+
+// AudioClip
+REFLECTION_BEGIN(ImpEngineModule::AudioClip)
+REFLECTION_MEMBER(_sounds)
+REFLECTION_END()
+
+/// ================== Client Component ==========================
+
+/// 예시용 리플렉션
+REFLECTION_BEGIN(ImpClient::TestComponent)
+REFLECTION_MEMBER(_prefab)
+REFLECTION_MEMBER(_moveSpeed)
+REFLECTION_END()
+
+/// GameManager
+REFLECTION_BEGIN(ImpClient::GameManager)
+REFLECTION_MEMBER(_leftPlayerName)
+REFLECTION_MEMBER(_rightPlayerName)
+REFLECTION_MEMBER(_hackingArrowPrefab)
+REFLECTION_MEMBER(_qtePrefab)
+REFLECTION_MEMBER(_hackingCountPrefab)
+REFLECTION_MEMBER(_hackableUIPrefab)
+REFLECTION_END()
+
+/// LobyManager
+REFLECTION_BEGIN(ImpClient::LobyManager)
+REFLECTION_MEMBER(_readUIPrefab)
+REFLECTION_END()
+
+
+/// GamePad
+REFLECTION_BEGIN(ImpClient::GamePad)
+REFLECTION_MEMBER(_padID)
+REFLECTION_END()
+
+/// PlayerMovement
+REFLECTION_BEGIN(ImpClient::PlayerMovement)
+REFLECTION_MEMBER(_moveSpeed)
+REFLECTION_MEMBER(_jumpPower)
+REFLECTION_MEMBER(_cameraName)
+REFLECTION_END()
+
+/// PlayerCamera
+REFLECTION_BEGIN(ImpClient::PlayerCamera)
+REFLECTION_MEMBER(_offset)
+REFLECTION_MEMBER(_playerName)
+REFLECTION_END()
+
+/// PlayerAttack
+REFLECTION_BEGIN(ImpClient::PlayerAttack)
+REFLECTION_MEMBER(_attackRange)
+REFLECTION_MEMBER(_dectectionRange)
+REFLECTION_MEMBER(_dectectVibration)
+REFLECTION_MEMBER(_empPrefab)
+REFLECTION_END()
+
+/// PlayerState
+REFLECTION_BEGIN(ImpClient::PlayerState)
+REFLECTION_END()
+
+/// QTE
+REFLECTION_BEGIN(ImpClient::QTE)
+REFLECTION_MEMBER(_maxButton)
+REFLECTION_MEMBER(_timeLimit)
+REFLECTION_MEMBER(_buttonPrefab)
+REFLECTION_MEMBER(_timebarPrefab)
+REFLECTION_MEMBER(_hackingScreenPrefab)
+REFLECTION_END()
+
+/// QTEButtonEffect
+REFLECTION_BEGIN(ImpClient::QTEButtonEffect)
+REFLECTION_END()
+
+/// QTETimebar
+REFLECTION_BEGIN(ImpClient::QTETimeBar)
+REFLECTION_MEMBER(_colorTimeBarPrefab)
+REFLECTION_MEMBER(_greenTexture)
+REFLECTION_MEMBER(_redTextrue)
+REFLECTION_END()
+
+/// HackingArrow
+REFLECTION_BEGIN(ImpClient::HackingArrow)
+REFLECTION_MEMBER(_offset)
+REFLECTION_MEMBER(_targetName)
+REFLECTION_END()
+
+/// HackableObject
+REFLECTION_BEGIN(ImpClient::HackableObject)
+REFLECTION_MEMBER(_ability)
+REFLECTION_END()
+
+REFLECTION_BEGIN(ImpClient::ReadyHacking)
+REFLECTION_MEMBER(_qtePrefab)
+REFLECTION_END()
+
+
+// Ventilator
+REFLECTION_BEGIN(ImpClient::Ventilator)
+REFLECTION_END()
+
+// HackingChip
+REFLECTION_BEGIN(ImpClient::HackingChip)
+REFLECTION_END()
+
+// HackingCountUI
+REFLECTION_BEGIN(ImpClient::HackingCountUI)
+REFLECTION_MEMBER(_hackingChipPrefab)
+REFLECTION_MEMBER(_bigHackingChipPrefab)
+REFLECTION_MEMBER(_attackUIPrefab)
+REFLECTION_MEMBER(_hackSkillUIPrefab)
+REFLECTION_END()
+
+// AttackUI
+REFLECTION_BEGIN(ImpClient::AttackUI)
+REFLECTION_MEMBER(_blackScreenPrefab)
+REFLECTION_MEMBER(_whiteScreenPrefab)
+REFLECTION_END()
+
+// AttackUI
+REFLECTION_BEGIN(ImpClient::HackSkillUI)
+REFLECTION_MEMBER(_blackScreenPrefab)
+REFLECTION_END()
+
+// CullingWall
+REFLECTION_BEGIN(ImpClient::CullingWall)
+REFLECTION_END()
+
+// EMP
+REFLECTION_BEGIN(ImpClient::EMP)
+REFLECTION_MEMBER(_ringPrefab)
+REFLECTION_END()
+
+// PlayerTracker
+REFLECTION_BEGIN(ImpClient::PlayerTracker)
+REFLECTION_MEMBER(_playerName)
+REFLECTION_MEMBER(_trackingPointPrefab)
+REFLECTION_END()
+
+// SoundStore
+REFLECTION_BEGIN(ImpClient::SoundStore)
+REFLECTION_MEMBER(_soundPath)
+REFLECTION_MEMBER(_soundPath2)
+REFLECTION_END()
+
+// HackingScreen
+REFLECTION_BEGIN(ImpClient::HackingScreen)
+REFLECTION_MEMBER(_hackingScreen2Prefab)
+REFLECTION_END()
+
+// ElectronicDisplay
+REFLECTION_BEGIN(ImpClient::ElectronicDisplay)
+REFLECTION_MEMBER(_changeSpeed)
+REFLECTION_MEMBER(_intensity)
+REFLECTION_MEMBER(_maxIntensity)
+REFLECTION_MEMBER(_minmumIntensity)
+REFLECTION_END()
+
+// CameraWalk
+REFLECTION_BEGIN(ImpClient::CameraWalk)
+REFLECTION_MEMBER(_points)
+REFLECTION_MEMBER(_pointsPlayTime)
+REFLECTION_MEMBER(_cameraWalkStartTime)
+REFLECTION_MEMBER(_playerAnimationStartTime)
+REFLECTION_MEMBER(_gameStartTime)
+REFLECTION_END()
+
+// Fade
+REFLECTION_BEGIN(ImpClient::FadeIn)
+REFLECTION_MEMBER(_isStart)
+REFLECTION_MEMBER(_isFadeIn)
+REFLECTION_MEMBER(_alpha)
+REFLECTION_MEMBER(_speed)
+REFLECTION_END()
+
+REFLECTION_BEGIN(ImpClient::DeubugKey)
+REFLECTION_END()

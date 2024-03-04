@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="header">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="header\00.Define">
+      <UniqueIdentifier>{754ee57e-2ff3-4c1f-9359-e5ebfefc1eef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="header\01.ImpEditor">
+      <UniqueIdentifier>{c4abf7c7-1a58-4f77-9385-85e1104c7073}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="header\08.imgui">
+      <UniqueIdentifier>{eefc7d2c-e7cf-4979-8cd3-0b9fcb4cb845}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="header\02.Viewer">
+      <UniqueIdentifier>{e68a992b-1c3c-4469-9703-d937baa8f942}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="header\03.ToolCamera">
+      <UniqueIdentifier>{00e7736a-108b-48c3-9f5b-2c494cfa8151}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="source\00.Define">
+      <UniqueIdentifier>{96da310a-a0ac-411a-9ac5-6604ea38588e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\08.imgui">
+      <UniqueIdentifier>{9a3e06d0-d1be-4444-95fe-f4a25d161b34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\01.ImpEditor">
+      <UniqueIdentifier>{998c30e7-6d14-4727-a4d8-ad4845c9f314}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\02.Viewer">
+      <UniqueIdentifier>{e61bee6a-c68a-44ad-8287-56681a1d3ad0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\03.ToolCamera">
+      <UniqueIdentifier>{4d32e051-d099-4079-9933-ea81b3e6b1c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="header\04.Rebind">
+      <UniqueIdentifier>{f61a515f-4bfd-4a19-b7b2-0c34e5fb5d27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\04.Rebind">
+      <UniqueIdentifier>{aa656ba4-b40c-453e-9278-302dd5c8d522}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\05.DebugObject">
+      <UniqueIdentifier>{0413d728-8c3e-4428-972c-ce304c738835}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="header\05.DebugObject">
+      <UniqueIdentifier>{19287010-6a23-449a-95c9-9b34b7a64742}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="header\06.Shortcut">
+      <UniqueIdentifier>{ab60eb70-4b16-4bda-b48e-e6363c7f634b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\06.ShortCut">
+      <UniqueIdentifier>{66e93a05-6b4b-4915-90c5-91b13a241168}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\07.Gizumo">
+      <UniqueIdentifier>{4ebc2bca-0504-4c7d-8c84-b6f03ee7db1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="header\07.Gizumo">
+      <UniqueIdentifier>{a352c78c-0965-4ef2-a39c-29aa024337db}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="imstb_truetype.h">
+      <Filter>header\08.imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imstb_textedit.h">
+      <Filter>header\08.imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imstb_rectpack.h">
+      <Filter>header\08.imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui_stdlib.h">
+      <Filter>header\08.imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui_internal.h">
+      <Filter>header\08.imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui_impl_win32.h">
+      <Filter>header\08.imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui_impl_dx11.h">
+      <Filter>header\08.imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui.h">
+      <Filter>header\08.imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imconfig.h">
+      <Filter>header\08.imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImpToolModulePCH.h" />
+    <ClInclude Include="ImpToolModuleHeader.h" />
+    <ClInclude Include="IEditor.h">
+      <Filter>header\01.ImpEditor</Filter>
+    </ClInclude>
+    <ClInclude Include="ImpEditor.h">
+      <Filter>header\01.ImpEditor</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityViewer.h">
+      <Filter>header\02.Viewer</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentViewer.h">
+      <Filter>header\02.Viewer</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceViewer.h">
+      <Filter>header\02.Viewer</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldViewer.h">
+      <Filter>header\02.Viewer</Filter>
+    </ClInclude>
+    <ClInclude Include="ToolCamera.h">
+      <Filter>header\03.ToolCamera</Filter>
+    </ClInclude>
+    <ClInclude Include="Save.h">
+      <Filter>header\00.Define</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGuiColor.h">
+      <Filter>header\00.Define</Filter>
+    </ClInclude>
+    <ClInclude Include="Rebind.h">
+      <Filter>header\04.Rebind</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugObject.h">
+      <Filter>header\05.DebugObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Cube.h">
+      <Filter>header\05.DebugObject</Filter>
+    </ClInclude>
+    <ClInclude Include="SphereCollider.h">
+      <Filter>header\05.DebugObject</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugViewer.h">
+      <Filter>header\02.Viewer</Filter>
+    </ClInclude>
+    <ClInclude Include="Light.h">
+      <Filter>header\05.DebugObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>header\05.DebugObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>header\05.DebugObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Shortcut.h">
+      <Filter>header\06.Shortcut</Filter>
+    </ClInclude>
+    <ClInclude Include="CapsuleCollider.h">
+      <Filter>header\05.DebugObject</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphEditor.h">
+      <Filter>header\08.imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImCurveEdit.h">
+      <Filter>header\08.imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGuizmo.h">
+      <Filter>header\08.imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGradient.h">
+      <Filter>header\08.imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImSequencer.h">
+      <Filter>header\08.imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImpGizumo.h">
+      <Filter>header\07.Gizumo</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="imgui_widgets.cpp">
+      <Filter>source\08.imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui.cpp">
+      <Filter>source\08.imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui_demo.cpp">
+      <Filter>source\08.imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui_draw.cpp">
+      <Filter>source\08.imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui_impl_dx11.cpp">
+      <Filter>source\08.imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui_impl_win32.cpp">
+      <Filter>source\08.imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui_stdlib.cpp">
+      <Filter>source\08.imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui_tables.cpp">
+      <Filter>source\08.imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImpToolModulePCH.cpp">
+      <Filter>source\00.Define</Filter>
+    </ClCompile>
+    <ClCompile Include="IEditor.cpp">
+      <Filter>source\01.ImpEditor</Filter>
+    </ClCompile>
+    <ClCompile Include="ImpEditor.cpp">
+      <Filter>source\01.ImpEditor</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityViewer.cpp">
+      <Filter>source\02.Viewer</Filter>
+    </ClCompile>
+    <ClCompile Include="ComponentViewer.cpp">
+      <Filter>source\02.Viewer</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceViewer.cpp">
+      <Filter>source\02.Viewer</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldViewer.cpp">
+      <Filter>source\02.Viewer</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolCamera.cpp">
+      <Filter>source\03.ToolCamera</Filter>
+    </ClCompile>
+    <ClCompile Include="Save.cpp">
+      <Filter>source\00.Define</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGuiColor.cpp">
+      <Filter>source\00.Define</Filter>
+    </ClCompile>
+    <ClCompile Include="Rebind.cpp">
+      <Filter>source\04.Rebind</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugObject.cpp">
+      <Filter>source\05.DebugObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Cube.cpp">
+      <Filter>source\05.DebugObject</Filter>
+    </ClCompile>
+    <ClCompile Include="SphereCollider.cpp">
+      <Filter>source\05.DebugObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Light.cpp">
+      <Filter>source\05.DebugObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>source\05.DebugObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Shortcut.cpp">
+      <Filter>source\06.ShortCut</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh.cpp">
+      <Filter>source\05.DebugObject</Filter>
+    </ClCompile>
+    <ClCompile Include="CapsuleCollider.cpp">
+      <Filter>source\05.DebugObject</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugViewer.cpp">
+      <Filter>source\02.Viewer</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGuizmo.cpp">
+      <Filter>source\08.imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImSequencer.cpp">
+      <Filter>source\08.imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphEditor.cpp">
+      <Filter>source\08.imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImCurveEdit.cpp">
+      <Filter>source\08.imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGradient.cpp">
+      <Filter>source\08.imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImpGizumo.cpp">
+      <Filter>source\07.Gizumo</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

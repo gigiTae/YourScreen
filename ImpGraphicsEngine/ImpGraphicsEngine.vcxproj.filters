@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="pch">
+      <UniqueIdentifier>{7ad1ce89-e094-4351-a6e5-454cafbda44c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GraphicsEngine">
+      <UniqueIdentifier>{20dad60d-1d34-4146-86d3-8c7a7ce2c478}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DirectX11">
+      <UniqueIdentifier>{c5cb6e96-47db-4772-b970-4c589834a66c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{1ee1b389-75de-4c2b-aba0-310294f42871}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\Object">
+      <UniqueIdentifier>{47633421-fd57-4d0e-9e9a-ae4cd69e60bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\Object\Mesh">
+      <UniqueIdentifier>{cb610ff1-eb19-4f45-bf3c-9e17222db1ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\Management">
+      <UniqueIdentifier>{6b46a59c-a853-49a1-82be-258a9fa8b1af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\Shader">
+      <UniqueIdentifier>{90020fba-00f7-4410-8cda-3386291a7477}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\Management\Loader">
+      <UniqueIdentifier>{3a982e6e-e01e-4d48-a0bf-28abd049c9c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\Object\IObject">
+      <UniqueIdentifier>{0d6d496a-9dff-43e4-ba77-943dac15fde6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\Object\Light">
+      <UniqueIdentifier>{f1c0db3e-faa9-41a5-887b-5083c62b8aef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\Object\IBoundingVolumeObject">
+      <UniqueIdentifier>{ef0ea7d6-d5c7-4da7-9b55-91a9af1a66d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GraphicsEngine\Renderer">
+      <UniqueIdentifier>{e6dc8610-f9a6-4f28-adc5-781e6065c5ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Collision">
+      <UniqueIdentifier>{176802bf-1b6a-4d48-9fdf-6724bea199d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Collision\Picking">
+      <UniqueIdentifier>{9138e9ba-87d1-4c06-9ed9-23962b9948b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Collision\Culling">
+      <UniqueIdentifier>{a9b9e817-5f66-4e85-961c-7b0df33f32fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\Object\UIObject">
+      <UniqueIdentifier>{337370ae-56c2-426e-a983-38ea5d04003f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h">
+      <Filter>pch</Filter>
+    </ClInclude>
+    <ClInclude Include="ImpD3D11Renderer.h">
+      <Filter>GraphicsEngine\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="ImpCamera.h">
+      <Filter>Resource\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="IImpGraphicsEngine.h">
+      <Filter>GraphicsEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="ImpGraphicsEngine.h">
+      <Filter>GraphicsEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="Define.h">
+      <Filter>pch</Filter>
+    </ClInclude>
+    <ClInclude Include="ImpDevice.h">
+      <Filter>DirectX11</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="ImpRenderTarget.h">
+      <Filter>DirectX11</Filter>
+    </ClInclude>
+    <ClInclude Include="ImpRenderState.h">
+      <Filter>DirectX11</Filter>
+    </ClInclude>
+    <ClInclude Include="Vertex.h">
+      <Filter>Resource\Object\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory.h">
+      <Filter>Resource\Management</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager.h">
+      <Filter>Resource\Management</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectManager.h">
+      <Filter>Resource\Management</Filter>
+    </ClInclude>
+    <ClInclude Include="Builder.h">
+      <Filter>Resource\Management</Filter>
+    </ClInclude>
+    <ClInclude Include="ImpLoader.h">
+      <Filter>Resource\Management\Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="IObject.h">
+      <Filter>Resource\Object\IObject</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshObject.h">
+      <Filter>Resource\Object\IObject</Filter>
+    </ClInclude>
+    <ClInclude Include="QuadObject.h">
+      <Filter>Resource\Object\IObject</Filter>
+    </ClInclude>
+    <ClInclude Include="LineListObject.h">
+      <Filter>Resource\Object\IObject</Filter>
+    </ClInclude>
+    <ClInclude Include="LightBase.h">
+      <Filter>Resource\Object\Light</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectionalLight.h">
+      <Filter>Resource\Object\Light</Filter>
+    </ClInclude>
+    <ClInclude Include="SpotLight.h">
+      <Filter>Resource\Object\Light</Filter>
+    </ClInclude>
+    <ClInclude Include="PointLight.h">
+      <Filter>Resource\Object\Light</Filter>
+    </ClInclude>
+    <ClInclude Include="SkyBoxObject.h">
+      <Filter>Resource\Object\IObject</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationObject.h">
+      <Filter>Resource\Object\IObject</Filter>
+    </ClInclude>
+    <ClInclude Include="ImpAnimationPlayer.h" />
+    <ClInclude Include="IBoundingVolumeObject.h">
+      <Filter>Resource\Object\IBoundingVolumeObject</Filter>
+    </ClInclude>
+    <ClInclude Include="BoundingVolumeObject.h">
+      <Filter>Resource\Object\IBoundingVolumeObject</Filter>
+    </ClInclude>
+    <ClInclude Include="GeometryMaker.h">
+      <Filter>Resource\Object\IBoundingVolumeObject</Filter>
+    </ClInclude>
+    <ClInclude Include="ImpFont.h">
+      <Filter>DirectX11</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinnedMeshObject.h">
+      <Filter>Resource\Object\IObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Material.h">
+      <Filter>Resource\Object\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="PBRMeshObject.h">
+      <Filter>Resource\Object\IObject</Filter>
+    </ClInclude>
+    <ClInclude Include="PickingManager.h">
+      <Filter>Collision\Picking</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionPrimitive.h">
+      <Filter>Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="CullingManager.h">
+      <Filter>Collision\Culling</Filter>
+    </ClInclude>
+    <ClInclude Include="BloomQuadObject.h">
+      <Filter>Resource\Object\IObject</Filter>
+    </ClInclude>
+    <ClInclude Include="IImp3DRenderer.h">
+      <Filter>GraphicsEngine\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="IUIObject.h">
+      <Filter>Resource\Object\UIObject</Filter>
+    </ClInclude>
+    <ClInclude Include="UIObject.h">
+      <Filter>Resource\Object\UIObject</Filter>
+    </ClInclude>
+    <ClInclude Include="ForwardObject.h">
+      <Filter>Resource\Object\IObject</Filter>
+    </ClInclude>
+    <ClInclude Include="ForwardOITQuadObject.h">
+      <Filter>Resource\Object\IObject</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <Filter>pch</Filter>
+    </ClCompile>
+    <ClCompile Include="ImpD3D11Renderer.cpp">
+      <Filter>GraphicsEngine\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="ImpCamera.cpp">
+      <Filter>Resource\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="ImpGraphicsEngine.cpp">
+      <Filter>GraphicsEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="ImpDevice.cpp">
+      <Filter>DirectX11</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="ImpRenderTarget.cpp">
+      <Filter>DirectX11</Filter>
+    </ClCompile>
+    <ClCompile Include="ImpRenderState.cpp">
+      <Filter>DirectX11</Filter>
+    </ClCompile>
+    <ClCompile Include="Vertex.cpp">
+      <Filter>Resource\Object\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory.cpp">
+      <Filter>Resource\Management</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceManager.cpp">
+      <Filter>Resource\Management</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectManager.cpp">
+      <Filter>Resource\Management</Filter>
+    </ClCompile>
+    <ClCompile Include="Builder.cpp">
+      <Filter>Resource\Management</Filter>
+    </ClCompile>
+    <ClCompile Include="ImpLoader.cpp">
+      <Filter>Resource\Management\Loader</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshObject.cpp">
+      <Filter>Resource\Object\IObject</Filter>
+    </ClCompile>
+    <ClCompile Include="QuadObject.cpp">
+      <Filter>Resource\Object\IObject</Filter>
+    </ClCompile>
+    <ClCompile Include="IImpGraphicsEngine.cpp">
+      <Filter>GraphicsEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="LineListObject.cpp">
+      <Filter>Resource\Object\IObject</Filter>
+    </ClCompile>
+    <ClCompile Include="LightBase.cpp">
+      <Filter>Resource\Object\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectionalLight.cpp">
+      <Filter>Resource\Object\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="SpotLight.cpp">
+      <Filter>Resource\Object\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="PointLight.cpp">
+      <Filter>Resource\Object\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="SkyBoxObject.cpp">
+      <Filter>Resource\Object\IObject</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimationObject.cpp">
+      <Filter>Resource\Object\IObject</Filter>
+    </ClCompile>
+    <ClCompile Include="ImpAnimationPlayer.cpp" />
+    <ClCompile Include="IBoundingVolumeObject.cpp">
+      <Filter>Resource\Object\IBoundingVolumeObject</Filter>
+    </ClCompile>
+    <ClCompile Include="BoundingVolumeObject.cpp">
+      <Filter>Resource\Object\IBoundingVolumeObject</Filter>
+    </ClCompile>
+    <ClCompile Include="GeometryMaker.cpp">
+      <Filter>Resource\Object\IBoundingVolumeObject</Filter>
+    </ClCompile>
+    <ClCompile Include="ImpFont.cpp">
+      <Filter>DirectX11</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinnedMeshObject.cpp">
+      <Filter>Resource\Object\IObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Material.cpp">
+      <Filter>Resource\Object\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="PBRMeshObject.cpp">
+      <Filter>Resource\Object\IObject</Filter>
+    </ClCompile>
+    <ClCompile Include="PickingManager.cpp">
+      <Filter>Collision\Picking</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionPrimitive.cpp">
+      <Filter>Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="CullingManager.cpp">
+      <Filter>Collision\Culling</Filter>
+    </ClCompile>
+    <ClCompile Include="BloomQuadObject.cpp">
+      <Filter>Resource\Object\IObject</Filter>
+    </ClCompile>
+    <ClCompile Include="UIObject.cpp">
+      <Filter>Resource\Object\UIObject</Filter>
+    </ClCompile>
+    <ClCompile Include="ForwardObject.cpp">
+      <Filter>Resource\Object\IObject</Filter>
+    </ClCompile>
+    <ClCompile Include="ForwardOITQuadObject.cpp">
+      <Filter>Resource\Object\IObject</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="SecondPassVS.hlsl">
+      <Filter>Resource\Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="SecondPassPS.hlsl">
+      <Filter>Resource\Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="FirstNormalVS.hlsl">
+      <Filter>Resource\Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="FirstNormalPS.hlsl">
+      <Filter>Resource\Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="FPDefaultVS.hlsl">
+      <Filter>Resource\Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="FPDefaultPS.hlsl">
+      <Filter>Resource\Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="FPSkyBoxVS.hlsl">
+      <Filter>Resource\Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="FPSkyBoxPS.hlsl">
+      <Filter>Resource\Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="FPMeshVS.hlsl">
+      <Filter>Resource\Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="FPMeshPS.hlsl">
+      <Filter>Resource\Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="FPBoundingVolumeVS.hlsl">
+      <Filter>Resource\Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="FPSkinnedMeshPS.hlsl">
+      <Filter>Resource\Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="FPSkinnedMeshVS.hlsl">
+      <Filter>Resource\Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="FPPBRMeshPS.hlsl">
+      <Filter>Resource\Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="FPPBRMeshVS.hlsl">
+      <Filter>Resource\Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="ForwardMeshVS.hlsl">
+      <Filter>Resource\Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="ForwardMeshPS.hlsl">
+      <Filter>Resource\Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="BloomPassPS.hlsl">
+      <Filter>Resource\Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="BloomPassVS.hlsl">
+      <Filter>Resource\Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="DownSamplingPS.hlsl">
+      <Filter>Resource\Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="DownSamplingVS.hlsl">
+      <Filter>Resource\Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="UIPS.hlsl">
+      <Filter>Resource\Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="UIVS.hlsl">
+      <Filter>Resource\Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="ForwardPBRVS.hlsl">
+      <Filter>Resource\Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="ForwardPBRPS.hlsl">
+      <Filter>Resource\Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="ForwardQuadPS.hlsl">
+      <Filter>Resource\Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="ForwardQuadVS.hlsl">
+      <Filter>Resource\Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="FPUIMeshVS.hlsl">
+      <Filter>Resource\Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="FPUIMeshPS.hlsl">
+      <Filter>Resource\Shader</Filter>
+    </FxCompile>
+  </ItemGroup>
+</Project>

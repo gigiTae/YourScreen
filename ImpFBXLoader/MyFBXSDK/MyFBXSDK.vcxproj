@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{6458f291-f2af-4032-a0f8-762e789bb1e5}</ProjectGuid>
+    <RootNamespace>MyFBXSDK</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.2\lib\vs2019\x86\debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>wininet.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene;C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libfbxsdk-md.lib;libxml2-md.lib;zlib-md.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <AdditionalLibraryDirectories>C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\lib\vs2022\x64\debug;%(AdditionalLibraryDirectories);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/ignore:4099 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene;C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalOptions>/ignore:4099 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalLibraryDirectories>C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\lib\vs2022\x64\debug;;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libfbxsdk-md.lib;libxml2-md.lib;zlib-md.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\Common\Common.cxx" />
+    <ClCompile Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\DisplayAnimation.cxx" />
+    <ClCompile Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\DisplayCache.cxx" />
+    <ClCompile Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\DisplayCamera.cxx" />
+    <ClCompile Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\DisplayCommon.cxx" />
+    <ClCompile Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\DisplayGenericInfo.cxx" />
+    <ClCompile Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\DisplayGlobalSettings.cxx" />
+    <ClCompile Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\DisplayHierarchy.cxx" />
+    <ClCompile Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\DisplayLight.cxx" />
+    <ClCompile Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\DisplayLink.cxx" />
+    <ClCompile Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\DisplayLodGroup.cxx" />
+    <ClCompile Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\DisplayMarker.cxx" />
+    <ClCompile Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\DisplayMaterial.cxx" />
+    <ClCompile Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\DisplayMesh.cxx" />
+    <ClCompile Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\DisplayNurb.cxx" />
+    <ClCompile Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\DisplayPatch.cxx" />
+    <ClCompile Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\DisplayPivotsAndLimits.cxx" />
+    <ClCompile Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\DisplayPose.cxx" />
+    <ClCompile Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\DisplayShape.cxx" />
+    <ClCompile Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\DisplaySkeleton.cxx" />
+    <ClCompile Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\DisplayTexture.cxx" />
+    <ClCompile Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\DisplayUserProperties.cxx" />
+    <ClCompile Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\main.cxx" />
+    <ClCompile Include="MyCommon.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="MyfirstFbxSdkProgram.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\Common\Common.h" />
+    <ClInclude Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\DisplayAnimation.h" />
+    <ClInclude Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\DisplayCache.h" />
+    <ClInclude Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\DisplayCamera.h" />
+    <ClInclude Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\DisplayCommon.h" />
+    <ClInclude Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\DisplayGenericInfo.h" />
+    <ClInclude Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\DisplayGlobalSettings.h" />
+    <ClInclude Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\DisplayHierarchy.h" />
+    <ClInclude Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\DisplayLight.h" />
+    <ClInclude Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\DisplayLink.h" />
+    <ClInclude Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\DisplayLodGroup.h" />
+    <ClInclude Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\DisplayMarker.h" />
+    <ClInclude Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\DisplayMaterial.h" />
+    <ClInclude Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\DisplayMesh.h" />
+    <ClInclude Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\DisplayNurb.h" />
+    <ClInclude Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\DisplayPatch.h" />
+    <ClInclude Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\DisplayPivotsAndLimits.h" />
+    <ClInclude Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\DisplayPose.h" />
+    <ClInclude Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\DisplayShape.h" />
+    <ClInclude Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\DisplaySkeleton.h" />
+    <ClInclude Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\DisplayTexture.h" />
+    <ClInclude Include="C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\samples\ImportScene\DisplayUserProperties.h" />
+    <ClInclude Include="MyCommon.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

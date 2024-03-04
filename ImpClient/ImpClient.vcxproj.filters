@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="header">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="header\Player">
+      <UniqueIdentifier>{af91b281-73e1-4445-9d0a-4610a2abf2f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\Player">
+      <UniqueIdentifier>{60bc6c30-2b98-40bc-8da3-bc6c6dde1ed3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="header\Test">
+      <UniqueIdentifier>{91cb4a04-f540-49ad-8ed3-ea4a2895d0f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\Example">
+      <UniqueIdentifier>{574dd1e0-8971-427d-b9e4-dc20df210abe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="header\Hacking">
+      <UniqueIdentifier>{e95b988d-afd3-400f-823c-fa992a3828aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\Hacking">
+      <UniqueIdentifier>{c4bd4729-73c5-4adb-bd28-955b0b138204}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="header\UI">
+      <UniqueIdentifier>{fea1d7d3-3d32-43f2-a14b-fd6e9ddf1db7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\UI">
+      <UniqueIdentifier>{940d18bc-0da8-4ae9-ba6f-ee2f7e716036}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="header\Culling">
+      <UniqueIdentifier>{9fd3786d-d6cc-4996-9ae9-2791bc986b79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\Culling">
+      <UniqueIdentifier>{3b6dd847-ea23-48f6-8089-b8deb05b19c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="header\Manager">
+      <UniqueIdentifier>{b28aa9e6-8c8d-4f3c-a5d4-bf13f868669b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\Manager">
+      <UniqueIdentifier>{213ac8ba-4361-4e2a-9eec-3116d263ab30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\Sound">
+      <UniqueIdentifier>{d5af9108-a832-4967-a5db-bd6f2d6afa75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="header\Sound">
+      <UniqueIdentifier>{37f19979-35c3-4171-8861-cec0f25a002b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\Loby">
+      <UniqueIdentifier>{80ba7eb6-c53f-4ee7-a45c-2c5c42393d59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="header\Loby">
+      <UniqueIdentifier>{7c272e99-a0a3-4279-815c-450c2dcf4930}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="PlayerMovement.cpp">
+      <Filter>source\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="TestComponent.cpp">
+      <Filter>source\Example</Filter>
+    </ClCompile>
+    <ClCompile Include="GamePad.cpp">
+      <Filter>source\Loby</Filter>
+    </ClCompile>
+    <ClCompile Include="HackingArrow.cpp">
+      <Filter>source\Hacking</Filter>
+    </ClCompile>
+    <ClCompile Include="ImpClientPCH.cpp">
+      <Filter>source\Example</Filter>
+    </ClCompile>
+    <ClCompile Include="HackableObject.cpp">
+      <Filter>source\Hacking</Filter>
+    </ClCompile>
+    <ClCompile Include="GameManager.cpp">
+      <Filter>source\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerAttack.cpp">
+      <Filter>source\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerCamera.cpp">
+      <Filter>source\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerState.cpp">
+      <Filter>source\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="QTEButtonEffect.cpp">
+      <Filter>source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="QTETimeBar.cpp">
+      <Filter>source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="QTE.cpp">
+      <Filter>source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="HackingCountUI.cpp">
+      <Filter>source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Ventilator.cpp">
+      <Filter>source\Hacking</Filter>
+    </ClCompile>
+    <ClCompile Include="HackingChip.cpp">
+      <Filter>source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="AttackUI.cpp">
+      <Filter>source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="CullingWall.cpp">
+      <Filter>source\Culling</Filter>
+    </ClCompile>
+    <ClCompile Include="EMP.cpp">
+      <Filter>source\Hacking</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerTracker.cpp">
+      <Filter>source\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="LobyManager.cpp">
+      <Filter>source\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundStore.cpp">
+      <Filter>source\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="HackSkillUI.cpp">
+      <Filter>source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="HackingScreen.cpp">
+      <Filter>source\Hacking</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerAnimationSpeed.cpp">
+      <Filter>source\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="ElectronicDisplay.cpp">
+      <Filter>source\Loby</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraWalk.cpp">
+      <Filter>header\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="ReadyHacking.cpp">
+      <Filter>source\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="FadeIn.cpp">
+      <Filter>header\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="DeubugKey.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ImpClientPCH.h" />
+    <ClInclude Include="ImpClientHeader.h" />
+    <ClInclude Include="PlayerMovement.h">
+      <Filter>header\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="TestComponent.h">
+      <Filter>header\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="GamePad.h">
+      <Filter>header\Loby</Filter>
+    </ClInclude>
+    <ClInclude Include="HackingArrow.h">
+      <Filter>header\Hacking</Filter>
+    </ClInclude>
+    <ClInclude Include="HackableObject.h">
+      <Filter>header\Hacking</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerAttack.h">
+      <Filter>header\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="GameManager.h">
+      <Filter>header\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerCamera.h">
+      <Filter>header\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerState.h">
+      <Filter>header\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="QTEButtonEffect.h">
+      <Filter>header\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="QTETimeBar.h">
+      <Filter>header\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="QTE.h">
+      <Filter>header\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="HackingCountUI.h">
+      <Filter>header\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Ventilator.h">
+      <Filter>header\Hacking</Filter>
+    </ClInclude>
+    <ClInclude Include="Define.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="HackingChip.h">
+      <Filter>header\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="AttackUI.h">
+      <Filter>header\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="CullingWall.h">
+      <Filter>header\Culling</Filter>
+    </ClInclude>
+    <ClInclude Include="EMP.h">
+      <Filter>header\Hacking</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerTracker.h">
+      <Filter>header\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="LobyManager.h">
+      <Filter>header\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundStore.h">
+      <Filter>header\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="HackSkillUI.h">
+      <Filter>header\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="HackingScreen.h">
+      <Filter>header\Hacking</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerAnimationSpeed.h">
+      <Filter>header\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="ElectronicDisplay.h">
+      <Filter>header\Loby</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraWalk.h">
+      <Filter>header\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="ReadyHacking.h">
+      <Filter>header\Loby</Filter>
+    </ClInclude>
+    <ClInclude Include="FadeIn.h">
+      <Filter>header\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="DeubugKey.h">
+      <Filter>header</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

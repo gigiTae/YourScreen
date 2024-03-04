@@ -1,0 +1,46 @@
+#pragma once
+#include "ImpMath.h"
+#include "pch.h"
+
+using namespace ImpMath;
+
+namespace ImpStructure
+{
+	struct ImpVertex
+	{
+		Vector3 _localPos;
+
+<<<<<<< .mine
+		float _u = 0, _v = 0; // texture
+||||||| .r223
+		//float _u = 0, _v = 0; // texture
+		std::vector<Vector2> _uvs;
+=======
+		float _u = 0, _v = 0; // texture
+		//std::vector<Vector2> _uvs;
+>>>>>>> .r230
+
+		Vector3 _normal;
+		Vector3 _tangent; // normalMap
+		Vector3 _bitangent; // normalMap
+		Vector4 _color;
+	};
+
+	struct ImpFace
+	{
+		// 기본 인덱스를 읽은 다음에
+		// 버텍스 스플릿을 해서 직접 기존의 인덱스들을 변경해야함
+		size_t vertexIndex[3];
+	};
+
+	struct ImpMesh
+	{
+		std::vector<ImpVertex*> _meshVertex;
+		std::vector<ImpFace*> _meshFace;
+
+		bool _hasTexture = false;
+		bool _hasNormal = false;
+		bool _hasTangent = false;
+		bool _hasColor = false;
+	};
+}

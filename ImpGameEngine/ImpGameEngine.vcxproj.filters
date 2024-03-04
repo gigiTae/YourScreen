@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="source">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="header">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="header\00.Define">
+      <UniqueIdentifier>{36ffa279-135d-4a7a-ac9f-20c2d63c3857}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="header\01.GameEngine">
+      <UniqueIdentifier>{aa2be2df-1211-44c5-99ee-949853200969}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\01.GameEngine">
+      <UniqueIdentifier>{df4de963-9ecb-4010-a07f-ba264738de0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\99.Reflection">
+      <UniqueIdentifier>{66aee9f4-7a4d-42dc-9977-576e61910c89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="header\02.System">
+      <UniqueIdentifier>{58a80386-8bd3-48d1-8876-2972542067d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\02.System">
+      <UniqueIdentifier>{270424bb-3f4a-4c2e-8690-11679f6c518d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\00.Define">
+      <UniqueIdentifier>{bec8bf79-1ddb-4507-a7c0-3b5a62638def}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="WindowInfomation.h">
+      <Filter>header\00.Define</Filter>
+    </ClInclude>
+    <ClInclude Include="ImpGameEnginePCH.h" />
+    <ClInclude Include="ComponentHeader.h">
+      <Filter>header\00.Define</Filter>
+    </ClInclude>
+    <ClInclude Include="ImpGameEngineHeader.h" />
+    <ClInclude Include="ExportDefine.h">
+      <Filter>header\00.Define</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraSystem.h">
+      <Filter>header\02.System</Filter>
+    </ClInclude>
+    <ClInclude Include="ImpGameEngine.h">
+      <Filter>header\01.GameEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderingSystem.h">
+      <Filter>header\02.System</Filter>
+    </ClInclude>
+    <ClInclude Include="IImpEngine.h">
+      <Filter>header\01.GameEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="ImpToolEngine.h">
+      <Filter>header\01.GameEngine</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ImpGameEngine.cpp">
+      <Filter>source\01.GameEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowInfomation.cpp">
+      <Filter>source\00.Define</Filter>
+    </ClCompile>
+    <ClCompile Include="ImpGameEnignePCH.cpp">
+      <Filter>source\00.Define</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmaincpp.cpp">
+      <Filter>source\00.Define</Filter>
+    </ClCompile>
+    <ClCompile Include="Refleciton.cpp">
+      <Filter>source\99.Reflection</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraSystem.cpp">
+      <Filter>source\02.System</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderingSystem.cpp">
+      <Filter>source\02.System</Filter>
+    </ClCompile>
+    <ClCompile Include="ImpToolEngine.cpp">
+      <Filter>source\01.GameEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="IImpEngine.cpp">
+      <Filter>source\01.GameEngine</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

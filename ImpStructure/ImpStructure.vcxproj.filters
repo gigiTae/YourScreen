@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="pch">
+      <UniqueIdentifier>{2f59839d-c229-42b3-adb2-c893f215531e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{97898170-afd1-4e95-bec2-6af735ce5001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3D">
+      <UniqueIdentifier>{55fd1b50-0916-4335-94b8-eb79fc18c971}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Color">
+      <UniqueIdentifier>{713f0770-0b6c-4eea-a35a-ce3caad2b4e3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h">
+      <Filter>pch</Filter>
+    </ClInclude>
+    <ClInclude Include="ImpMath.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="ImpMesh.h">
+      <Filter>3D</Filter>
+    </ClInclude>
+    <ClInclude Include="ImpColor.h">
+      <Filter>Color</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <Filter>pch</Filter>
+    </ClCompile>
+    <ClCompile Include="ImpMath.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="ImpMesh.cpp">
+      <Filter>3D</Filter>
+    </ClCompile>
+    <ClCompile Include="ImpColor.cpp">
+      <Filter>Color</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
